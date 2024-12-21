@@ -2,7 +2,6 @@ import json
 
 kvalf = input("Введите номер квалификации: ")  
 find = False 
-
 with open("dump.json", 'r', encoding = 'utf-8') as file:
     read_file = json.load(file)   
     for skill in read_file: 
@@ -27,8 +26,6 @@ for specialty in read_file:
             specialty_title = specialty["fields"].get("title") 
             specialty_educational = specialty["fields"].get("c_type") 
             specialty_c = specialty["fields"].get("code")
-
-
 else:
     print("\n", " Найдено ".center(80, "="),'\n')
     print(f"{specialty_c} >> Специальность '{specialty_title}', {specialty_educational}") 
